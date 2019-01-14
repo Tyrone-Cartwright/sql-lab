@@ -44,7 +44,7 @@ WHERE CustomerID = 92
 
 ## list orders grouped by customer showing the number of orders per customer. _Rattlesnake Canyon Grocery_ should have 7 orders.
 
-SELECT Customers.CustomerName, COUNT('Rattlesnake Canyon Grocery') as OrdersCount FROM Orders
+SELECT Customers.CustomerName, COUNT() as OrdersCount FROM Orders
 INNER JOIN Customers
 ON Orders.CustomerID = Customers.CustomerID
 GROUP BY Orders.CustomerID;
